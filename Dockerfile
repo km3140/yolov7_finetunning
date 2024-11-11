@@ -1,5 +1,5 @@
 # 1. Ubuntu 베이스 이미지 선택
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -48,4 +48,4 @@ RUN grep -v "grpcio" requirements.txt > requirements_new.txt && \
 ENV PATH="/app/venv/bin:$PATH"
 
 # 12. 기본 실행 명령
-CMD ["/bin/bash"]
+CMD ["tail", "-f", "/dev/null"]
